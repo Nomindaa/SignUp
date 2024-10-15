@@ -1,11 +1,12 @@
 #counter-container {
-    height: calc(100vh - 200px);
+    height: calc(100vh - 160px);
     background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
+    color: black;
   }
   
   #counter-container h1 {

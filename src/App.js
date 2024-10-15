@@ -1,10 +1,10 @@
-import { Header, Footer, Counter } from "./components";
+import { Header, Footer, Counter, Form } from "./components";
 
 export const App = () => {
   return (
     <div>
       <Header />
-      <Counter />
+      <Form />
       <Footer />
     </div>
   );
