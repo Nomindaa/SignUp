@@ -22,7 +22,7 @@ export const Signup = () => {
       formData.firstName &&
       formData.lastName &&
       formData.email &&
-      formData.password
+      formData.password === ""
     ) {
       alert("Sign Up Successful");
       console.log(formData);
