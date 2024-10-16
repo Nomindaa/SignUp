@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Signin, Signup, Home, Posts, Joke } from "./pages";
+import { Signin, Signup, Home, Profile } from "./pages";
 
 export const App = () => {
   return (
@@ -9,8 +9,7 @@ export const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/sign-in" element={<Signin />} />
         <Route path="/sign-up" element={<Signup />} />
-        <Route path="/posts" element={<Posts />} />
-        <Route path="/random-joke" element={<Joke />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   );
