@@ -8,7 +8,7 @@ export const Button = (props) => {
 
   return (
     <div>
-      <button id={buttonSize} {...rest}>
+      <button className="buttonClass" id={buttonSize} {...rest}>
         {children}
       </button>
     </div>

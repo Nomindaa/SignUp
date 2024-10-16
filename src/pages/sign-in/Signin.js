@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./Signup.css";
+import "./Signin.css";
+import { Link, useNavigate } from "react-router-dom";
 
-export const Signup = () => {
+export const Signin = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
     email: "",
     password: "",
   });
@@ -18,39 +18,19 @@ export const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (
-      formData.firstName &&
-      formData.lastName &&
-      formData.email &&
-      formData.password === ""
-    ) {
-      alert("Sign Up Successful");
-      console.log(formData);
+    if (formData.email && formData.password) {
+      alert("Sign in successful");
+      navigate("/");
     } else {
       alert("Please enter all fields");
     }
   };
 
   return (
-    <div id="container">
+    <div id="sign-in-container">
       <form id="form-container">
-        <h1>Sign Up</h1>
-        <input
-          className="inputClass"
-          type="text"
-          placeholder="First Name"
-          name="firstName"
-          value={formData.firstName}
-          onChange={handleChange}
-        />
-        <input
-          className="inputClass"
-          type="text"
-          placeholder="Last Name"
-          name="lastName"
-          value={formData.lastName}
-          onChange={handleChange}
-        />
+        <h1>Sign In</h1>
+
         <input
           className="inputClass"
           type="email"
@@ -68,8 +48,15 @@ export const Signup = () => {
           onChange={handleChange}
         />
         <button className="btn" type="submit" onClick={handleSubmit}>
-          Sign Up
+          Sign In
         </button>
+
+        <Link
+          to="/sign-up"
+          style={{ textDecoration: "none", color: "black", fontSize: "14px" }}
+        >
+          Do not have an account?
+        </Link>
       </form>
     </div>
   );
